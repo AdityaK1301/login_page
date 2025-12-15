@@ -17,7 +17,7 @@
                         <div class="card">
                             <div class="card-header">Add Users</div>
                             <div class="card-body">
-                                <form action="/create" method="post">
+                                <form method="post">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <label>Name</label>
@@ -49,21 +49,23 @@
                             <div class="card-body">
                                 <table class="table table-bordered table-striped text-center">
                                     <tr>
+                                        <th>Id</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Mobile</th>
                                         <th>Password</th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
                                     </tr>
+                                    
+                                    {% for data in fetch %}
                                     <tr>
-                                        <td>Aditya</td>
-                                        <td>aditya@gmail.com</td>
-                                        <td>1234567890</td>
-                                        <td>12345</td>
-                                        <td>Edit</td>
-                                        <td>Delete</td>
+                                        <td>{{ data.id }}</td>
+                                        <td>{{ data.name }}</td>
+                                        <td>{{ data.email }}</td>
+                                        <td>{{ data.mobile }}</td>
+                                        <td>{{ data.password }}</td>
+                                        
                                     </tr>
+                                    {% endfor %}
                                 </table>
                             </div>
                         </div>
