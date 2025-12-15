@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-12">
+                <h1 class="text-center">Crud Operation For Flask</h1>
+                <div class="row mt-4">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">Add Users</div>
+                            <div class="card-body">
+                                <form action="/create" method="post">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label>Name</label>
+                                            <input type="text" name="name" id="" class="form-control mt-2 mb-2" placeholder="Name">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <label>Email Id</label>
+                                            <input type="text" name="email" id="" class="form-control mt-2 mb-2" placeholder="Email Id">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <label>Mobile No.</label>
+                                            <input type="text" name="mobile" id="" class="form-control mt-2 mb-2" placeholder="Mobile No.">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <label>Password</label>
+                                            <input type="text" name="password" id="" class="form-control mt-2 mb-2" placeholder="Password">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <button type="submit" class="btn btn-success w-100">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">Show Users</div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-striped text-center">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Mobile</th>
+                                        <th>Password</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Aditya</td>
+                                        <td>aditya@gmail.com</td>
+                                        <td>1234567890</td>
+                                        <td>12345</td>
+                                        <td>Edit</td>
+                                        <td>Delete</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
